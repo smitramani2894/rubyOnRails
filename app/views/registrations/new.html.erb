@@ -1,0 +1,99 @@
+
+<div class="mx-auto max-w-md">
+
+  <div class="mb-8 text-center">
+    <h1 class="text-4xl font-bold tracking-tight text-gray-900">
+      Create Account
+    </h1>
+
+    <p class="mt-2 text-sm text-gray-600">
+      Create a new account to get started.
+    </p>
+  </div>
+
+  <% if @user.errors.any? %>
+    <div class="mb-6 rounded-lg border border-red-200 bg-red-50 p-4">
+      <h2 class="mb-2 text-sm font-semibold text-red-800">
+        <%= pluralize(@user.errors.count, "error") %>
+        prevented your account from being created:
+      </h2>
+
+      <ul class="list-disc space-y-1 pl-5 text-sm text-red-700">
+        <% @user.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="overflow-hidden rounded-xl border border-gray-200 bg-white shadow-sm">
+    <div class="p-6">
+
+      <%= form_with model: @user,
+          url: register_path,
+          method: :post,
+          class: "space-y-6" do |form| %>
+
+        <div>
+          <%= form.label :name,
+              class: "mb-2 block text-sm font-semibold text-gray-700" %>
+
+          <%= form.text_field :name,
+              class: "block w-full rounded-lg border border-gray-300 px-4 py-2.5 text-sm text-gray-900 outline-none transition placeholder:text-gray-400 focus:border-blue-500 focus:ring-2 focus:ring-blue-100",
+              placeholder: "Your name" %>
+        </div>
+
+        <div>
+          <%= form.label :email,
+              class: "mb-2 block text-sm font-semibold text-gray-700" %>
+
+          <%= form.email_field :email,
+              class: "block w-full rounded-lg border border-gray-300 px-4 py-2.5 text-sm text-gray-900 outline-none transition placeholder:text-gray-400 focus:border-blue-500 focus:ring-2 focus:ring-blue-100",
+              placeholder: "you@example.com" %>
+        </div>
+
+        <div>
+          <%= form.label :age,
+              class: "mb-2 block text-sm font-semibold text-gray-700" %>
+
+          <%= form.number_field :age,
+              class: "block w-full rounded-lg border border-gray-300 px-4 py-2.5 text-sm text-gray-900 outline-none transition focus:border-blue-500 focus:ring-2 focus:ring-blue-100",
+              placeholder: "Your age" %>
+        </div>
+
+        <div>
+          <%= form.label :password,
+              class: "mb-2 block text-sm font-semibold text-gray-700" %>
+
+          <%= form.password_field :password,
+              class: "block w-full rounded-lg border border-gray-300 px-4 py-2.5 text-sm text-gray-900 outline-none transition focus:border-blue-500 focus:ring-2 focus:ring-blue-100",
+              placeholder: "Create a password" %>
+        </div>
+
+        <div>
+          <%= form.label :password_confirmation,
+              class: "mb-2 block text-sm font-semibold text-gray-700" %>
+
+          <%= form.password_field :password_confirmation,
+              class: "block w-full rounded-lg border border-gray-300 px-4 py-2.5 text-sm text-gray-900 outline-none transition focus:border-blue-500 focus:ring-2 focus:ring-blue-100",
+              placeholder: "Confirm your password" %>
+        </div>
+
+        <div>
+          <%= form.submit "Create Account",
+              class: "w-full cursor-pointer rounded-lg bg-blue-600 px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2" %>
+        </div>
+
+      <% end %>
+
+    </div>
+  </div>
+
+  <p class="mt-6 text-center text-sm text-gray-600">
+    Already have an account?
+    <%= link_to "Login",
+        login_path,
+        class: "font-semibold text-blue-600 hover:text-blue-700 hover:underline" %>
+  </p>
+
+</div>
