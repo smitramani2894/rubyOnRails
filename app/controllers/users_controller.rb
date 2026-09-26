@@ -7,18 +7,17 @@ class UsersController < ApplicationController
   @users =
       case params[:status]
       when "active"
-        User.active
+        User.active.includes(:posts)
       when "inactive"
-        User.inactive
+        User.inactive.includes(:posts)
       else
-        User.all
+        User.all.includes(:posts)
       end
   end
 
   def new
     @user = User.new
   end
-
 
   def create
     @user = User.new(user_params)

@@ -36,3 +36,7 @@
 
 /app/assets/builds/*
 !/app/assets/builds/.keep
+
+# Ignore uploaded files stored in public (Paperclip/CarrierWave uploads)
+/public/system/*
+!/public/system/.keep

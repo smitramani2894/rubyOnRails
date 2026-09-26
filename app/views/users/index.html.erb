@@ -1,4 +1,3 @@
-
 <div class="mb-8 flex items-center justify-between rounded-xl bg-white p-5 shadow-sm">
   <div>
     <% if current_user %>
@@ -74,6 +73,27 @@
             <%= user.age %>
           </p>
         </div>
+
+        <!-- User's Posts -->
+        <% if user.posts.any? %>
+          <div class="mt-4">
+            <p class="mb-2 text-sm font-semibold text-gray-700">
+              Posts:
+            </p>
+
+            <ul class="space-y-1">
+              <% user.posts.each do |post| %>
+                <li class="text-sm text-gray-600">
+                  • <%= post.title %>
+                </li>
+              <% end %>
+            </ul>
+          </div>
+        <% else %>
+          <p class="mt-4 text-sm text-gray-400">
+            No posts yet.
+          </p>
+        <% end %>
       </div>
 
       <div>

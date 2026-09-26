@@ -17,6 +17,13 @@
       <%= post.content %>
     </p>
 
+    
+   <div class="mt-4">
+    <p class="mb-2 text-sm font-semibold text-gray-700">
+      User:  • <%= post.user.name %>
+    </p>
+  </div>
+      
     <%= link_to "View Post", post_path(post) %>
   </div>
 

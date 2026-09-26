@@ -17,4 +17,25 @@ class User < ApplicationRecord
     scope :active, -> { where(is_active: true) }
     scope :inactive, -> { where(is_active: false) }
     scope :adults, -> { where("age >= ?", 18) }
+
+
+  def self.ransackable_attributes(auth_object = nil)
+    [
+      "id",
+      "name",
+      "email",
+      "age",
+      "is_active",
+      "created_at",
+      "updated_at"
+    ]
+  end
+   def self.ransackable_associations(auth_object = nil)
+    [
+      "memberships",
+      "posts",
+      "profile",
+      "projects"
+    ]
+   end
 end
