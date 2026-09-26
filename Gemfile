@@ -24,7 +24,7 @@ gem "bcrypt", "~> 3.1.7"
 
  gem "dotenv-rails"
 
- gem "json", "2.21.2"
+ gem "json", "3.0.2"
 
 gem "kt-paperclip"
 
