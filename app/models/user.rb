@@ -4,7 +4,7 @@ class User < ApplicationRecord
 
     has_many :posts, dependent: :destroy
     has_one :profile, dependent: :destroy
-    has_many :memberships
+    has_many :memberships, dependent: :destroy
     has_many :projects, through: :memberships
 
     validates :name, presence: true
