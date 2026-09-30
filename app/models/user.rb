@@ -27,7 +27,8 @@ class User < ApplicationRecord
       "age",
       "is_active",
       "created_at",
-      "updated_at"
+      "updated_at",
+       "posts_count"
     ]
   end
    def self.ransackable_associations(auth_object = nil)
