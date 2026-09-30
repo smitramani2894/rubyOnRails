@@ -1,9 +1,12 @@
 source "https://rubygems.org"
+ruby "3.2.0"
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
-gem "rails", "~> 8.1.3", ">= 8.1.3.1"
+gem "rails", "~> 7.2.2"
+
 # The modern asset pipeline for Rails [https://github.com/rails/propshaft]
-gem "propshaft"
+# gem "propshaft"
+
 # Use postgresql as the database for Active Record
 gem "pg", "~> 1.1"
 # Use the Puma web server [https://github.com/puma/puma]
@@ -24,15 +27,18 @@ gem "bcrypt", "~> 3.1.7"
 
  gem "dotenv-rails"
 
- gem "json", "2.21.2"
+ gem "json", "< 3.0"
 
-gem "kt-paperclip"
+gem "kt-paperclip", "7.3.0"
 
 gem "activeadmin"
 
-gem "devise"
+gem "devise", "4.9.4"
 
-gem "dartsass-rails"
+# gem "dartsass-rails"
+
+gem "sprockets-rails"
+gem "sass-rails", "~> 6.0"
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem "tzinfo-data", platforms: %i[ windows jruby ]

@@ -4,7 +4,7 @@ class User < ApplicationRecord
 
     has_many :posts, dependent: :destroy
     has_one :profile, dependent: :destroy
-    has_many :memberships
+    has_many :memberships, dependent: :destroy
     has_many :projects, through: :memberships
 
     validates :name, presence: true
@@ -27,7 +27,8 @@ class User < ApplicationRecord
       "age",
       "is_active",
       "created_at",
-      "updated_at"
+      "updated_at",
+       "posts_count"
     ]
   end
    def self.ransackable_associations(auth_object = nil)

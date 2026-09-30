@@ -77,18 +77,4 @@ Rails.application.configure do
   # config.generators.apply_rubocop_autocorrect_after_generate!
 end
 
-Paperclip::Attachment.default_options[:storage] = :s3
-# use this s3 storage adapter of paperclip for iamge
-# :s3 > use S3-compatible storage interface provide by Backblaze b2
-
-Paperclip::Attachment.default_options[:s3_region] = ENV["B2_REGION"]
-
-Paperclip::Attachment.default_options[:s3_credentials] = {
-  bucket: ENV["B2_BUCKET"],
-  access_key_id: ENV["B2_ACCESS_KEY_ID"],
-  secret_access_key: ENV["B2_SECRET_ACCESS_KEY"]
-}
-
-Paperclip::Attachment.default_options[:s3_host_name] = ENV["B2_ENDPOINT"]
-
 # bundle exec ruby -e 'require "paperclip"; puts Paperclip::VERSION'
