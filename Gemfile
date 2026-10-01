@@ -29,7 +29,7 @@ gem "bcrypt", "~> 3.1.7"
 
  gem "json", "< 3.0"
 
-gem "kt-paperclip", "7.3.0"
+gem "kt-paperclip", "8.0.0"
 
 gem "activeadmin"
 
