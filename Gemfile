@@ -33,7 +33,7 @@ gem "kt-paperclip", "7.3.0"
 
 gem "activeadmin"
 
-gem "devise", "4.9.4"
+gem "devise", "5.0.4"
 
 # gem "dartsass-rails"
 
