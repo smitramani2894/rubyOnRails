@@ -234,12 +234,12 @@ GEM
       activerecord
       kaminari-core (= 1.2.2)
     kaminari-core (1.2.2)
-    kt-paperclip (7.3.0)
+    kt-paperclip (8.0.0)
       activemodel (>= 4.2.0)
       activesupport (>= 4.2.0)
-      marcel (~> 1.0.1)
+      marcel (>= 1.0.1)
       mime-types
-      terrapin (>= 0.6.0, < 2.0)
+      terrapin (>= 0.6.0)
     language_server-protocol (3.17.0.6)
     lint_roller (1.1.0)
     logger (1.7.0)
@@ -252,7 +252,7 @@ GEM
       net-imap
       net-pop
       net-smtp
-    marcel (1.0.4)
+    marcel (1.2.1)
     matrix (0.4.3)
     mime-types (3.7.0)
       logger
@@ -489,8 +489,6 @@ GEM
       railties (>= 7.1.0)
     tzinfo (2.0.6)
       concurrent-ruby (~> 1.0)
-    tzinfo-data (1.2026.4)
-      tzinfo (>= 1.0.0)
     unicode-display_width (3.3.0)
       unicode-emoji (~> 4.3)
     unicode-emoji (4.3.0)
@@ -540,7 +538,7 @@ DEPENDENCIES
   json (< 3.0)
   jwt
   kamal
-  kt-paperclip (= 7.3.0)
+  kt-paperclip (= 8.0.0)
   pg (~> 1.1)
   puma (>= 5.0)
   rails (~> 7.2.2)
