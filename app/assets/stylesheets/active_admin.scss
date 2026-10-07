@@ -1,2 +1,25 @@
 @import "active_admin/mixins";
 @import "active_admin/base";
+@import "font-awesome";
+
+
+$success: #4caf50;
+$danger: #f44336;
+$primary: #4d5ec1;
+
+.success {
+	color: $success;
+}
+
+.danger {
+	color: $danger;
+}
+
+.primary {
+	color: $primary;
+}
+
+.fa {
+	padding: 0.5em !important;
+	font-size: 1.5em !important;
+}
