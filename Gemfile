@@ -62,7 +62,7 @@ gem "sass-rails", "~> 6.0"
 gem "bcrypt", "~> 3.1.7"
 
 # Authentication solution
-gem "devise", "4.9.4"
+gem "devise", "5.0.4"
 
 # JSON Web Token support
 gem "jwt"
