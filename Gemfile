@@ -5,7 +5,7 @@ ruby "3.2.0"
 # CORE RAILS
 # ==========================================
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
-gem "rails", "~> 7.2.2"
+gem "rails", "~> 8.1.4"
 
 
 # ==========================================
