@@ -80,7 +80,7 @@ gem "activeadmin"
 # ==========================================
 # FILE UPLOAD & STORAGE
 # ==========================================
-gem "kt-paperclip", "7.3.0"
+gem "kt-paperclip", "8.0.0"
 gem "caxlsx"
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
