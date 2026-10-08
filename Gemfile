@@ -84,7 +84,7 @@ gem "kt-paperclip", "7.3.0"
 gem "caxlsx"
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
-gem "image_processing", "~> 1.2"
+gem "image_processing", "~> 2.2"
 
 # AWS S3 cloud storage integration
 gem "aws-sdk-s3", "~> 1.232"
