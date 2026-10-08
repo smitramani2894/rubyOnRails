@@ -12,7 +12,7 @@ gem "rails", "~> 7.2.2"
 # DATABASE & BACKEND STORAGE
 # ==========================================
 # Use postgresql as the database for Active Record
-gem "pg", "~> 1.1"
+gem "pg", "~> 1.7"
 
 # Use the database-backed adapters for Rails.cache, Active Job, and Action Cable
 gem "solid_cache"
