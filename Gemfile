@@ -87,7 +87,7 @@ gem "caxlsx"
 gem "image_processing", "~> 1.2"
 
 # AWS S3 cloud storage integration
-gem "aws-sdk-s3", "~> 1.232"
+gem "aws-sdk-s3", "~> 1.233"
 
 
 # ==========================================
