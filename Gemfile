@@ -136,6 +136,6 @@ group :test do
 end
 
 gem "ruby-lsp", "~> 0.26.11", :group => :development
-gem "rubocop", "~> 1.91", :group => :development
+gem "rubocop", "~> 1.92", :group => :development
 
 gem "syntax_tree", "~> 6.3", :group => :development
